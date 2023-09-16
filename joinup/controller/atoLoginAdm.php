@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 
     if ($stmt->rowCount() > 0) {
-        header("Location: indexAdm.php");
+        header("Location: ../view/indexAdm.php");
     } else {
         echo "Credenciais de login incorretas. Tente novamente.";
     }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Administrador | joinup.admin</title>
+    <title>Administrador | joinup.admin</title>
 
     <link rel="stylesheet" href="./css/style.css">
 
@@ -17,25 +17,17 @@
 <body>
     <header class="header-adm-bg">
         <div class="container">
-            <div class="logo-adm"><a href="./loginAdm.html"><img src="./images/logoAdm.svg" alt="Logo JoinUp Administrador"></a></div>
+            <div class="logo-adm"><a href="./telaLoginAdm.html"><img src="./images/logoAdm.svg" alt="Logo JoinUp Administrador"></a></div>
         </div>
     </header>
 
-    <section id="login-adm">
-        <div class="container" id="form-login-adm-bg">
-            <form id="form-login-adm" action="../controller/atoLoginAdm.php" method="post">
-
-                <!-- Recebe e verifica o atributo do banco de dados usuarioAdm, da tabela estagio.administrador -->
-                <label class="font-1-s" for="usuarioAdm">Nome de usuário:</label>
-                <input type="text" id="usuarioAdm" name="usuarioAdm" required>
-    
-                <!-- Recebe e verifica o atributo do banco de dados senhaAdm, da tabela estagio.administrador -->
-                <label class="font-1-s" for="senhaAdm">Senha:</label>
-                <input type="password" id="senhaAdm" name="senhaAdm" required>
-                
-                <button id="btn-login-adm" class="btn" type="submit">Fazer Login</button>
-    
-            </form>
+    <section>
+        <div class="container"  id="main-content-admpage">
+            <h1 class="font-1-l color-c12">Olá, o que iremos cadastrar hoje?</h2>
+            
+            <a id="cadEmpresa" class="btn" href="./cadastrarEmpresa.html">Cadastrar Empresa</a>
+            
+            <a id="cadOportunidade" class="btn" href="./cadastrarOportunidade.html">Cadastrar Oportunidade de Estágio</a>
         </div>
     </section>
 
