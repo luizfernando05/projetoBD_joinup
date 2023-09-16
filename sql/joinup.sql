@@ -54,3 +54,27 @@ create table sistema.requisitoOportunidade (
 
 alter table sistema.administrador
 add column admin boolean default true;
+
+ALTER TABLE sistema.empresa
+ADD COLUMN telefoneEmpresaNovo varchar(20);
+
+UPDATE sistema.empresa
+SET telefoneEmpresaNovo = CAST(telefoneEmpresa AS varchar(20));
+
+ALTER TABLE sistema.empresa
+DROP COLUMN telefoneEmpresa;
+
+ALTER TABLE sistema.empresa
+RENAME COLUMN telefoneEmpresaNovo TO telefoneEmpresa;
+
+select * from sistema.empresa;
+
+select * from sistema.oportunidade;
+
+select * from sistema.administrador;
+
+select * from sistema.requisitoOportunidade;
+
+select * from sistema.tipoOportunidade;
+
+select * from sistema.oporEmp

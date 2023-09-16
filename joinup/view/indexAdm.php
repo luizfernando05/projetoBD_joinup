@@ -38,7 +38,7 @@
             
             <a id="cadEmpresa" class="btn" href="./cadastroEmpresa.php">Cadastrar Empresa</a>
             
-            <a id="cadOportunidade" class="btn" href="./cadastrarOportunidade.html">Cadastrar Oportunidade de Estágio</a>
+            <a id="cadOportunidade" class="btn" href="./cadastroOportunidade.php">Cadastrar Oportunidade de Estágio</a>
         </div>
     </section>
 
