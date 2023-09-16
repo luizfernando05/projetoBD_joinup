@@ -1,3 +1,14 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['usuarioAdm'])) {
+        header("Location: loginAdm.php");
+        exit();
+    }
+
+    include_once('../model/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,7 +36,7 @@
         <div class="container"  id="main-content-admpage">
             <h1 class="font-1-l color-c12">Olá, o que iremos cadastrar hoje?</h2>
             
-            <a id="cadEmpresa" class="btn" href="./cadastrarEmpresa.html">Cadastrar Empresa</a>
+            <a id="cadEmpresa" class="btn" href="./cadastroEmpresa.php">Cadastrar Empresa</a>
             
             <a id="cadOportunidade" class="btn" href="./cadastrarOportunidade.html">Cadastrar Oportunidade de Estágio</a>
         </div>

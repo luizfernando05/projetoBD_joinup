@@ -12,7 +12,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 
     if ($stmt->rowCount() > 0) {
+        // Inicie a sessão e defina a variável de sessão 'usuarioAdm'
+        session_start();
+        $_SESSION['usuarioAdm'] = $usuarioAdm;
+
+        // Redirecione o usuário para a página de administração
         header("Location: ../view/indexAdm.php");
+        exit(); // Certifique-se de sair após o redirecionamento para evitar execução adicional do código
     } else {
         echo "Credenciais de login incorretas. Tente novamente.";
     }

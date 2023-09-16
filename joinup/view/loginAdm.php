@@ -25,11 +25,11 @@
         <div class="container" id="form-login-adm-bg">
             <form id="form-login-adm" action="../controller/atoLoginAdm.php" method="post">
 
-                <!-- Recebe e verifica o atributo do banco de dados usuarioAdm, da tabela estagio.administrador -->
+                <!-- Recebe e verifica o atributo do banco de dados usuarioAdm, da tabela sistema.administrador -->
                 <label class="font-1-s" for="usuarioAdm">Nome de usuário:</label>
                 <input type="text" id="usuarioAdm" name="usuarioAdm" required>
     
-                <!-- Recebe e verifica o atributo do banco de dados senhaAdm, da tabela estagio.administrador -->
+                <!-- Recebe e verifica o atributo do banco de dados senhaAdm, da tabela sistema.administrador -->
                 <label class="font-1-s" for="senhaAdm">Senha:</label>
                 <input type="password" id="senhaAdm" name="senhaAdm" required>
                 
