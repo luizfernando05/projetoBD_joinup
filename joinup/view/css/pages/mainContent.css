@@ -1,0 +1,27 @@
+#main-content {
+    display: grid;
+    grid-template-columns: 7fr 5fr; 
+    gap: 24px;
+}
+
+#card1, #card2 {
+    border-radius: 20px;
+}
+
+#card1 {
+    background-color: var(--color-p-01);
+    padding: 60px 40px 72px; 
+}
+
+#card2 {
+    background-color: var(--color-c-03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+#card1 p {
+    padding-top: 36px;
+}

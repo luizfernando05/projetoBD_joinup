@@ -13,7 +13,9 @@
 @import url(./pages/cadastrarEmpresa.css);
 @import url(./pages/cadastroSucesso.css);
 @import url(./pages/cadastrarOportunidade.css);
+@import url(./pages/mainContent.css);
 
 /* Estilos dos conteúdos */
 @import url(./contents/headerAdm.css);
 @import url(./contents/footerAdm.css);
+@import url(./contents/headerAll.css);
