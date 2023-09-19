@@ -10,14 +10,30 @@ O foco primordial deste projeto foi a concepção de um sistema de integração 
 
 ### Índice:
 
-1. [Como ver esse projeto?]()
+1. [Instalação](#instalacao)
 2. [Licença]()
 3. [Criação do Banco de dados]()
 4. [Telas e Integração]()
 5. [Referências]()
 
+<div id='instalacao'/>  
 
+### 🔧 Instalação
 
+Para visualizar esta aplicação na sua máquina local, siga os seguintes passos:
+
+1. Clone esse repositório na sua máquina local, usando o seguinte comando:
+
+```
+   git clone https://github.com/seu-usuario/minha-aplicacao-web.git
+```
+
+2. Vá até o seu PostgreSQL e crie o banco de dados para a aplicação, copie e cole os códigos disponíveis no arquivo [joinup.sql]();
+3. Vá até o arquivo [config.php]() e insira as suas informações de conexão ao banco de dados (host, port, name, user, password);
+4. Vá ao arquivo [loginAdm.php]() e execute-o utilizando um servidor php - se estiver usando o VsCode, experimente esta [extensão](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver);
+5. Entre com as informações de login cadastradas no banco de dados, para, assim, ter acesso a página de adm da aplicação;
+6. Cadastre algumas informações genéricas no cadastro de empresa e no de oportunidade (nessa ordem);
+7. Por fim, vá até o arquivo [index.php]() e veja o site funcionando.
 
 
 
