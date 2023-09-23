@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="container">
@@ -76,7 +76,7 @@
     
     <section id="oportunidades">
     <div class="container">
-        <h2 class="font-1-xl color-c12">vagas disponíveis:</h2>
+        <h2  id="title-sec-opor" class="font-1-xl color-c12">vagas disponíveis:</h2>
 
         <div class="cards-oportunidades">
 
@@ -111,14 +111,14 @@
                 echo '</div>';
                 echo '<div class="opor-datas">';
                 echo '<h4 class="font-1-s color-c12">Datas da seleção:</h4>';
-                echo '<span class="font-2-xs color-c12">Início da seleção: ' . $row['datainicio'] . '</span>';
-                echo '<span class="font-2-xs color-c12">Fim da seleção: ' . $row['datafim'] . '</span>';
+                echo '<span class="font-2-xs color-c12 date-span">Início da seleção: ' . $row['datainicio'] . '</span>';
+                echo '<span class="font-2-xs color-c12 date-span">Fim da seleção: ' . $row['datafim'] . '</span>';
                 echo '</div>';
                 echo '<div class="info-emp">';
                 echo '<h4 class="font-1-s color-c12">Informações da empresa:</h4>';
-                echo '<span class="font-2-xs color-c12">Área de atuação: ' . $row['setorempresa'] . '</span>';
-                echo '<span class="font-2-xs color-c12">E-mail para contato: ' . $row['emailempresa'] . '</span>';
-                echo '<span class="font-2-xs color-c12">Telefone para contato: ' . $row['telefoneempresa'] . '</span>';
+                echo '<span class="font-2-xs color-c12 span-info-emp">Área de atuação: ' . $row['setorempresa'] . '</span>';
+                echo '<span class="font-2-xs color-c12 span-info-emp">E-mail para contato: ' . $row['emailempresa'] . '</span>';
+                echo '<span class="font-2-xs color-c12 span-info-emp">Telefone para contato: ' . $row['telefoneempresa'] . '</span>';
                 echo '</div>';
                 echo '<a class="btn" href="' . $row['linkins'] . '">CANDIDATAR-SE</a>';
                 echo '</div>';
