@@ -16,12 +16,12 @@
 <body>
     <header class="container">
         <div class="header-all-bg">
-            <a href="./index.html"><img src="./images/logoPrimary.svg" alt="Logo da JoinUp."></a>
+            <a href="./index.php"><img src="./images/logoPrimary.svg" alt="Logo da JoinUp."></a>
 
             <ul class="nav-all">
-                <li><a href="./" class="font-1-m-b color-c12">oportunidades</a></li>
+                <li><a href="#oportunidades" class="font-1-m-b color-c12">oportunidades</a></li>
 
-                <li><a href="./" class="font-1-m-b color-c12">empresas</a></li>
+                <li><a href="#parceiros" class="font-1-m-b color-c12">empresas</a></li>
             </ul>
         </div>
     </header>
@@ -132,6 +132,19 @@
 
     </div>
 </section>
+
+<footer>
+    <div class="footer-index-bg">
+        <div class="container">
+            <a href="./index.php"><img src="./images/logoSimple.svg" alt="Logo simplificado joinup"></a>
+
+            <p class="font-1-xs color-c2 copy-footer-index">© joinup, 2023. Todos os direitos reservados.</p>
+
+            <p class="font-1-xs color-c2 autoria-footer-index">Criado e desenvolvido por:</p>
+            <img src="./images/logoLuizFernandov2.svg" alt="Logo Luiz Fernando">
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
