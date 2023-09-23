@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador | joinup.admin</title>
+    <title>Cadastro de Empresa | joinup.admin</title>
 
     <link rel="stylesheet" href="./css/style.css">
 
@@ -33,23 +33,17 @@
     </header>
 
     <section>
-        <div class="container"  id="main-content-admpage">
-            <h1 class="font-1-l color-c12">Olá, o que iremos cadastrar hoje?</h2>
-            
-            <a id="cadEmpresa" class="btn" href="./cadastroEmpresa.php">Cadastrar Empresa</a>
-            
-            <a id="cadOportunidade" class="btn" href="./cadastroOportunidade.php">Cadastrar Oportunidade de Estágio</a>
-
-            <h1 class="font-1-l color-c12">Acesse o site principal:</h1>
-
-            <a class="btn" href="./index.php">CLIQUE AQUI</a>
+        <div class="container" id="cadEmpSucesso">
+            <h1 class="font-1-l color-c12">Cadastro realizado com sucesso!</h1>
+            <p class="font-1-m color-c12">A empresa ou oportunidade foi cadastrada com sucesso em nosso sistema.</p>
+            <a href="./indexAdm.php" class="btn">Voltar para a página principal</a>
         </div>
     </section>
 
     <footer>
         <div class="content-foot">
             <div id="logo-text">
-                <a href="./loginAdm.html"><img src="./images/logoAdm-text.svg" alt="Logo da JoinUp em versão de texto"></a>
+                <a href="./loginAdm.php"><img src="./images/logoAdm-text.svg" alt="Logo da JoinUp em versão de texto"></a>
             </div>
 
             <div id="text-foot">

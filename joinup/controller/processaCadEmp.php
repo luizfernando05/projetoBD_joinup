@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultado = cadastrar_empresa($nome, $cnpj, $setor, $email, $telefone);
 
     if ($resultado === true) {
-        header("Location: ./cadastroSucesso.php");
+        header("Location: ../view/cadastroSucesso.php");
         exit();
     } else {
         header("Location: cadastro_erro.php?mensagem=" . urlencode($resultado));

@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         $conn = null;
-        header("Location: cadastroSucesso.php");
+        header("Location: ../view/cadastroSucesso.php");
         exit();
     } catch (PDOException $e) {
         die("Erro na conexão com o banco de dados: " . $e->getMessage());

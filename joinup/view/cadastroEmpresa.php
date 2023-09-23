@@ -74,7 +74,7 @@
     <footer>
         <div class="content-foot">
             <div id="logo-text">
-                <a href="./loginAdm.html"><img src="./images/logoAdm-text.svg" alt="Logo da JoinUp em versão de texto"></a>
+                <a href="./loginAdm.php"><img src="./images/logoAdm-text.svg" alt="Logo da JoinUp em versão de texto"></a>
             </div>
 
             <div id="text-foot">
