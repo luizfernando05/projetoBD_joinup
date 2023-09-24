@@ -4,9 +4,10 @@
 </h1>
 
 <h3> Informações iniciais: </h3>
-O repositório remoto a seguir corresponde ao projeto da disciplina "Fundamentos de Banco de Dados" do curso de Bacharelado em Sistemas de Informação, situado na Universidade Federal Rural do Semi-Árido (UFERSA), campus Angicos. Este projeto foi concebido e desenvolvido pelo estudante Luiz Fernando da Cunha Silva, sob a orientação da Professora Dra. Samara Martins Nascimento Gonçalves.
 
-O foco primordial deste projeto foi a concepção de um sistema de integração com um banco de dados PostgreSQL. A partir dessa premissa, surgiu o "JoinUp," um site dedicado à divulgação de oportunidades de estágio. Para a concretização desse sistema, foram utilizadas as linguagens HTML e CSS para criar a interface de usuário, enquanto o PHP desempenhou um papel fundamental na integração e manipulação dos dados no banco de dados.
+<p> O repositório remoto a seguir corresponde ao projeto da disciplina "Fundamentos de Banco de Dados" do curso de Bacharelado em Sistemas de Informação, situado na Universidade Federal Rural do Semi-Árido (UFERSA), campus Angicos. Este projeto foi concebido e desenvolvido pelo estudante Luiz Fernando da Cunha Silva, sob a orientação da Professora Dra. Samara Martins Nascimento Gonçalves. </p>
+
+<p> O foco primordial deste projeto foi a concepção de um sistema de integração com um banco de dados PostgreSQL. A partir dessa premissa, surgiu o "JoinUp," um site dedicado à divulgação de oportunidades de estágio. Para a concretização desse sistema, foram utilizadas as linguagens HTML e CSS para criar a interface de usuário, enquanto o PHP desempenhou um papel fundamental na integração e manipulação dos dados no banco de dados. </p>
 
 <h3> Índice: </h3>
 
@@ -49,13 +50,13 @@ Com essas etapas, você estará pronto para explorar a aplicação localmente em
 
 <h3> 🎯 Introdução ao Projeto </h3>
 
-A crescente demanda por uma educação prática e voltada para o mercado de trabalho tem levado as instituições de ensino e os alunos a buscarem oportunidades de estágio como parte integrante do processo de formação acadêmica. Em paralelo, as empresas reconhecem a importância de recrutar talentos em fase de formação, visando o desenvolvimento de profissionais alinhados com suas necessidades e cultura organizacional. Nesse contexto, a criação de um sistema de divulgação de vagas de estágio se apresenta como uma proposta relevante. 
+<p> A crescente demanda por uma educação prática e voltada para o mercado de trabalho tem levado as instituições de ensino e os alunos a buscarem oportunidades de estágio como parte integrante do processo de formação acadêmica. Em paralelo, as empresas reconhecem a importância de recrutar talentos em fase de formação, visando o desenvolvimento de profissionais alinhados com suas necessidades e cultura organizacional. Nesse contexto, a criação de um sistema de divulgação de vagas de estágio se apresenta como uma proposta relevante. </p>
 
-Atualmente, muitos estudantes enfrentam desafios na busca por oportunidades de estágio, como a falta de informações sobre vagas disponíveis e a dificuldade em encontrar empresas que ofereçam programas de estágio alinhados com seus interesses e competências. Dessa forma, o sistema proposto visa simplificar esse processo, proporcionando um único local para acessar informações atualizadas sobre vagas de estágio. 
+<p> Atualmente, muitos estudantes enfrentam desafios na busca por oportunidades de estágio, como a falta de informações sobre vagas disponíveis e a dificuldade em encontrar empresas que ofereçam programas de estágio alinhados com seus interesses e competências. Dessa forma, o sistema proposto visa simplificar esse processo, proporcionando um único local para acessar informações atualizadas sobre vagas de estágio. </p>
 
-Ademais, vê-se que empresas muitas vezes enfrentam dificuldades em divulgar suas vagas de estágio de forma eficaz para o público-alvo. Assim, um sistema centralizado ajudaria a reduzir assimetrias de informação, permitindo que as empresas alcancem um público mais amplo de estudantes e, ao mesmo tempo, proporcionando aos alunos uma visão mais clara das oportunidades disponíveis. 
+<p> Ademais, vê-se que empresas muitas vezes enfrentam dificuldades em divulgar suas vagas de estágio de forma eficaz para o público-alvo. Assim, um sistema centralizado ajudaria a reduzir assimetrias de informação, permitindo que as empresas alcancem um público mais amplo de estudantes e, ao mesmo tempo, proporcionando aos alunos uma visão mais clara das oportunidades disponíveis. </p>
 
-Em resumo, a concepção e implementação de um Sistema de Compartilhamento de Vagas de Estágio são justificadas pela necessidade de melhorar o acesso dos estudantes a oportunidades de estágio, além de reduzir assimetrias de informação. Dessa maneira, esse projeto está alinhado com os princípios e conceitos fundamentais de banco de dados e oferece uma oportunidade única de aplicação prática do conhecimento adquirido na disciplina de Fundamentos de Banco de Dados.
+<p> Em resumo, a concepção e implementação de um Sistema de Compartilhamento de Vagas de Estágio são justificadas pela necessidade de melhorar o acesso dos estudantes a oportunidades de estágio, além de reduzir assimetrias de informação. Dessa maneira, esse projeto está alinhado com os princípios e conceitos fundamentais de banco de dados e oferece uma oportunidade única de aplicação prática do conhecimento adquirido na disciplina de Fundamentos de Banco de Dados. </p>
 
 </div>  
 
