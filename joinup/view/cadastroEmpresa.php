@@ -28,7 +28,7 @@
 <body>
     <header class="header-adm-bg">
         <div class="container">
-            <div class="logo-adm"><a href="./telaLoginAdm.html"><img src="./images/logoAdm.svg" alt="Logo JoinUp Administrador"></a></div>
+            <div class="logo-adm"><a href="./indexAdm.php"><img src="./images/logoAdm.svg" alt="Logo JoinUp Administrador"></a></div>
         </div>
     </header>
 
@@ -42,15 +42,15 @@
 
                         <!-- Envia para o banco de dados o valor referente ao atributo "nomeEmpresa" da tabela sistema.empresa-->
                         <label class="font-1-s color-c12" for="nomeEmpresa">Insira o nome da empresa:</label>
-                        <input type="text" id="nomeEmpresa" name="nomeEmpresa" required>
+                        <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Insira aqui o nome da empresa..." required>
 
                         <!-- Envia para o banco de dados o valor referente ao atributo "cnpjEmpresa" da tabela sistema.empresa-->
                         <label class="font-1-s color-c12" for="cnpjEmpresa">Insira o cnpj da empresa:</label>
-                        <input type="number" id="cnpjEmpresa" name="cnpjEmpresa" required>
+                        <input type="number" id="cnpjEmpresa" name="cnpjEmpresa" placeholder="00000000000000" required>
 
                         <!-- Envia para o banco de dados o valor referente ao atributo "setorEmpresa" da tabela sistema.empresa-->
                         <label class="font-1-s color-c12" for="setorEmpresa">Insira o setor de atuação da empresa:</label>
-                        <input type="text" id="setorEmpresa" name="setorEmpresa" required>
+                        <input type="text" id="setorEmpresa" name="setorEmpresa" placeholder="Insira aqui o setor da empresa..." required>
                     </div>
 
                     <div id="cadInfoContEmp">
@@ -58,11 +58,11 @@
 
                         <!-- Envia para o banco de dados o valor referente ao atributo "emailEmpresa" da tabela sistema.empresa-->
                         <label class="font-1-s color-c12" for="emailEmpresa">Insira o e-mail de contato da empresa:</label>
-                        <input type="text" id="emailEmpresa" name="emailEmpresa" required>
+                        <input type="text" id="emailEmpresa" name="emailEmpresa" placeholder="email@email.com" required>
     
                         <!-- Envia para o banco de dados o valor referente ao atributo "telefoneEmpresa" da tabela sistema.empresa-->
                         <label class="font-1-s color-c12" for="telefoneEmpresa">Insira o telefone de contato da empresa:</label>
-                        <input type="number" id="telefoneEmpresa" name="telefoneEmpresa" required>
+                        <input type="number" id="telefoneEmpresa" name="telefoneEmpresa" placeholder="999999999" required>
                     </div>
 
                     <button id="btn-login-adm" class="btn" type="submit">Cadastrar</button>

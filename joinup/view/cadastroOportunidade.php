@@ -28,7 +28,7 @@
 <body>
     <header class="header-adm-bg">
         <div class="container">
-            <div class="logo-adm"><a href="./telaLoginAdm.html"><img src="./images/logoAdm.svg"" alt="Logo JoinUp Administrador"></a></div>
+            <div class="logo-adm"><a href="./indexAdm.php"><img src="./images/logoAdm.svg"" alt="Logo JoinUp Administrador"></a></div>
         </div>
     </header>
 
@@ -41,19 +41,19 @@
 
                         <!-- Nome da oportunidade -->
                         <label class="font-1-s color-c12" for="nomeOportunidade">Nome da oportunidade:</label>
-                        <input type="text" id="nomeOportunidade" name="nomeOportunidade" required>
+                        <input type="text" id="nomeOportunidade" name="nomeOportunidade" placeholder="Insira aqui o nome da oportunidade..." required>
 
                         <!-- CEP -->
                         <label class="font-1-s color-c12" for="cep">CEP:</label>
-                        <input type="text" id="cep" name="cep">
+                        <input type="text" id="cep" name="cep" placeholder="00000000">
 
                         <!-- Estado -->
                         <label class="font-1-s color-c12" for="estado">Estado:</label>
-                        <input type="text" id="estado" name="estado">
+                        <input type="text" id="estado" name="estado" placeholder="Insira aqui o nome do estado...">
 
                         <!-- Cidade -->
                         <label class="font-1-s color-c12" for="cidade">Cidade:</label>
-                        <input type="text" id="cidade" name="cidade" >
+                        <input type="text" id="cidade" name="cidade" placeholder="Insira aqui o nome da cidade...">
 
                         <!-- Data de Início -->
                         <label class="font-1-s color-c12" for="dataInicio">Data de Início:</label>
@@ -65,23 +65,23 @@
 
                         <!-- Link de Inscrição -->
                         <label class="font-1-s color-c12" for="linkIns">Link de Inscrição:</label>
-                        <input type="text" id="linkIns" name="linkIns" required>
+                        <input type="text" id="linkIns" name="linkIns" required placeholder="Insira aqui o link de inscrição...">
 
                         <!-- Tipo de Oportunidade -->
                         <label class="font-1-s color-c12" for="tipo">Tipo de Oportunidade (separe por vírgula, se houver mais de um):</label>
-                        <input type="text" id="tipo" name="tipo" required>
+                        <input type="text" id="tipo" name="tipo" required placeholder="Remoto, presencial, híbrido...">
 
                         <!-- Requisitos da Oportunidade -->
                         <label class="font-1-s color-c12" for="requisitos">Requisitos da Oportunidade (separe por vírgula, se houver mais de um):</label>
-                        <input type="text" id="requisitos" name="requisitos">
+                        <input type="text" id="requisitos" name="requisitos" placeholder="Insira aqui os requisitos da oportunidade...">
 
                         <!-- CNPJ da Empresa -->
                         <label class="font-1-s color-c12" for="cnpjEmpresa">CNPJ da Empresa:</label>
-                        <input type="text" id="cnpjEmpresa" name="cnpjEmpresa" required>
+                        <input type="text" id="cnpjEmpresa" name="cnpjEmpresa" required placeholder="00000000000000">
 
                         <!-- Usuário Administrador -->
                         <label class="font-1-s color-c12" for="usuarioAdm">Usuário Administrador:</label>
-                        <input type="text" id="usuarioAdm" name="usuarioAdm" required>
+                        <input type="text" id="usuarioAdm" name="usuarioAdm" value="<?php echo $_SESSION['usuarioAdm']; ?>"  required>
                     </div>
 
                     <button id="btn-cad-oportunidade" class="btn" type="submit">Cadastrar Oportunidade</button>
