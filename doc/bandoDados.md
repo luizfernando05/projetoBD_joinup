@@ -32,3 +32,39 @@
 <p> O diagrama Entidade-Relacionamento resultante do projeto é apresentado na imagem a seguir: </p>
 
 <img src="./img/ProjetoBD - Modelo Entidade-Relacionamento.jpg">
+
+<h3> 3. Fase 2: Modelagem Relacional (MR) </h3>
+
+<p> Com a estrutura ER definida, foi procedida à tradução do modelo em um modelo relacional, em que cada entidade é mapeada para uma tabela, e os relacionamentos são representados por chaves estrangeiras. </p>
+
+<h4> 3.1. Definição das tabelas: </h4>
+
+<ul>
+    <li> <b>administrador:</b> (usuarioAdm, nomeAdm, senhaAdm); </li>
+    <li> <b>empresa:</b> (cnpjEmpresa, nomeEmpresa, setorEmpresa, emailEmpresa, telefoneEmpresa); </li>
+    <li> <b>oportunidade:</b> (idOportunidade, nomeOportunidade, CEP, estado, cidade, dataInicio, dataFim, linkInscricao); </li>
+    <li> <b>tipoOportunidade:</b> (tipo); </li>
+    <li> <b>requisitoOportunidade:</b> (requisito); </li>
+</ul>
+
+<h4> 3.2. Chaves primárias e chaves estrangeiras: </h4>
+
+<ol>
+    <li> Chave primária: campos 'cnpjEmpresa', 'usuarioAdm' e 'idOportunidade' em negrito; </li>
+    <li> Chave estrangeira: campos 'usuarioAdm', 'idOportunidade' e 'cnpjEmpresa' em itálico. </li>
+</ol>
+
+<ul>
+    <li> administrador: (<b>(PK) usuarioAdm</b>, nomeAdm, senhaAdm); </li>
+    <li> empresa: (<b>(PK) cnpjEmpresa</b>, nomeEmpresa, setorEmpresa, emailEmpresa, telefoneEmpresa <i>(FK) usuarioAdm</i>); </li>
+    <li> oportunidade: (<b>(PK) idOportunidade</b>, nomeOportunidade, CEP, estado, cidade, dataInicio, dataFim, linkInscricao <i>(FK) usuarioAdm</i>); </li>
+    <li> oporEmpre: (<i>(FK) usuarioAdm</i> <i>(FK) idOportunidade</i>); </li>
+    <li> tipoOportunidade: (tipo <i>idOportunidade</i>); </li>
+    <li> requisitoOportunidade: (requisito <i>(FK) idOportunidade</i>). </li>
+</ul>
+
+<h4> 3.3. Diagrama Relacional </h4>
+
+<p> O diagrama Relacional resultante do projeto é apresentado na imagem a seguir: </p>
+
+<img src="./img/ProjetoBD - Modelo Relacional.jpg">
