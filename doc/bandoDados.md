@@ -68,3 +68,102 @@
 <p> O diagrama Relacional resultante do projeto é apresentado na imagem a seguir: </p>
 
 <img src="./img/ProjetoBD - Modelo Relacional.jpg">
+
+<h3> 3. Fase 3: Implementação do Banco de Dados </h3>
+
+<p>Com o modelo relacional definido, agora é possível implementar o banco de dados usando o PostgreSQL. Abaixo, um exemplo simplificado dos script SQL das criações das tabelas:</p>
+
+```
+-- Esta instrução cria um novo banco de dados chamado "joinup".
+create database joinup;
+
+-- Essa instrução cria um schema chamado "sistema" dentro do banco de dados "joinup".
+create schema sistema;
+
+-- Aqui, é criada a tabela "administrador" com colunas para o nome de usuário, nome e senha do administrador. A coluna "usuarioAdm" é definida como chave primária.
+create table sistema.administrador (
+	usuarioAdm varchar(50) primary key,
+	nomeAdm varchar(300),
+	senhaAdm varchar(20)
+);
+
+-- Aqui, é criada a tabela "empresa" com informações sobre empresas, incluindo CNPJ, nome, setor, e-mail, telefone e o usuário administrador responsável. A coluna "cnpjEmpresa" é definida como chave primária, e há uma chave estrangeira referenciando a tabela "administrador".
+create table sistema.empresa (
+	cnpjEmpresa varchar(20),
+	nomeEmpresa varchar(50),
+	setorEmpresa varchar(30),
+	emailEmpresa varchar(200),
+	telefoneEmpresa int,
+	usuarioAdm varchar(50),
+	primary key(cnpjEmpresa),
+	foreign key(usuarioAdm) references sistema.administrador(usuarioAdm)
+);
+
+
+-- Essa tabela "oportunidade" contém informações sobre as oportunidades de estágio, como nome, localização, datas e links para inscrição. A coluna "idOportunidade" é uma chave primária, e há uma chave estrangeira referenciando a tabela "administrador".
+create table sistema.oportunidade (
+	idOportunidade serial,
+	nomeOportunidade varchar(500),
+	cep varchar(10),
+	estado varchar(100),
+	cidade varchar(100),
+	dataInicio date,
+	dataFim date,
+	linkIns varchar(1000),
+	usuarioAdm varchar(50),
+	primary key(idOportunidade),
+	foreign key(usuarioAdm) references sistema.administrador(usuarioAdm)
+);
+
+-- A tabela "oporEmp" é usada para relacionar empresas a oportunidades de estágio. Ela possui chaves estrangeiras que fazem referência às tabelas "empresa" e "oportunidade".
+create table sistema.oporEmp (
+	cnpjEmpresa varchar(20),
+	idOportunidade serial,
+	foreign key(cnpjEmpresa) references sistema.empresa(cnpjEmpresa),
+	foreign key(idOportunidade) references sistema.oportunidade(idOportunidade)
+);
+
+-- Essa tabela "tipoOportunidade" é usada para definir tipos específicos de oportunidades relacionados a uma oportunidade principal. Ela possui uma chave estrangeira que faz referência à tabela "oportunidade".
+create table sistema.tipoOportunidade (
+	tipo varchar(100),
+	idOportunidade serial,
+	foreign key(idOportunidade) references sistema.oportunidade(idOportunidade)
+);
+
+-- A tabela "requisitoOportunidade" é usada para listar os requisitos específicos associados a uma oportunidade. Ela possui uma chave estrangeira que faz referência à tabela "oportunidade".
+create table sistema.requisitoOportunidade (
+	requisito varchar(100),
+	idOportunidade serial,
+	foreign key(idOportunidade) references sistema.oportunidade(idOportunidade)
+);
+
+-- Essa instrução adiciona uma coluna booleana chamada 'admin' à tabela "administrador" com um valor padrão de TRUE.
+alter table sistema.administrador
+add column admin boolean default true;
+
+-- Esta instrução adiciona uma nova coluna chamada 'telefoneEmpresaNovo' à tabela "empresa" com um tipo de dados VARCHAR(20).
+alter table sistema.empresa
+add COLUMN telefoneEmpresaNovo varchar(20);
+
+-- Essa instrução copia os dados da coluna 'telefoneEmpresa' para a nova coluna 'telefoneEmpresaNovo', convertendo o tipo de dados para VARCHAR(20).
+update sistema.empresa
+set telefoneEmpresaNovo = CAST(telefoneEmpresa AS varchar(20));
+
+-- Esta instrução remove a coluna 'telefoneEmpresa' da tabela "empresa".
+alter table sistema.empresa
+drop COLUMN telefoneEmpresa;
+
+-- Esta instrução renomeia a coluna 'telefoneEmpresaNovo' para 'telefoneEmpresa' na tabela "empresa".
+alter table sistema.empresa
+RENAME COLUMN telefoneEmpresaNovo TO telefoneEmpresa;
+```
+
+<div id='rodape'>
+
+------
+<h4> Projeto da Disciplina Fundamentos de Banco de Dados </h4>
+<p> Universidade Federal Rural do Semi-Árido (UFERSA), Angicos-RN - Bacharelado em Sistemas de Informação</p>
+<p> © Luiz Fernando, 2023 </p>
+<img src="../joinup/view/images/logoLuizFernandov2.svg">
+
+</div>  
