@@ -31,7 +31,7 @@ values
 
 <h4> 2.2. Inserindo valores na tabela de empresa: </h4>
 
-<p> Para inserir empresas no sistema, é necessário preencher o formulário disponível na página de [cadastro de empresa](../joinup/view/cadastroEmpresa.php), após isso esses dados passam para a página de [processamento](../joinup/controller/processaCadEmp.php) para que possam, assim, serem inserido na tabela "sistema.empresa". O script SQL da inserção dos dados está disponível abaixo: </p>
+Para inserir empresas no sistema, é necessário preencher o formulário disponível na página de [cadastro de empresa](../joinup/view/cadastroEmpresa.php), após isso esses dados passam para a página de [processamento](../joinup/controller/processaCadEmp.php) para que possam, assim, serem inserido na tabela "sistema.empresa". O script SQL da inserção dos dados está disponível abaixo:
 
 ```
 -- Inserção de Empresas no Sistema
@@ -53,7 +53,7 @@ values (:cnpj, :nome, :setor, :email, :telefone)
 
 <h4> 2.3. Inserindo valores nas tabelas de oportunidade, tipoOportunidade e requisitoOportunidade: </h4>
 
-<p> Para inserir oportunidades no sistema, é necessário preencher o formulário disponível na página de [cadastro de oportunidade](../joinup/view/cadastroOportunidade.php), após isso esses dados passam para a página de [processamento](../joinup/controller/processaCadOpo.php) para que possam, assim, serem inserido nas tabelas "sistema.empresa", "sistema.tipoOportunidade" e "sistema.requisitoOportunidade". O script SQL da inserção dos dados está disponível abaixo: </p>
+Para inserir oportunidades no sistema, é necessário preencher o formulário disponível na página de [cadastro de oportunidade](../joinup/view/cadastroOportunidade.php), após isso esses dados passam para a página de [processamento](../joinup/controller/processaCadOpo.php) para que possam, assim, serem inserido nas tabelas "sistema.empresa", "sistema.tipoOportunidade" e "sistema.requisitoOportunidade". O script SQL da inserção dos dados está disponível abaixo:
 
 ```
 -- Inserção de Oportunidades no Sistema
@@ -90,7 +90,7 @@ values (:requisito, :idOportunidade);
 
 <h4> 2.4. Consulta dos dados para a exibição desses: </h4>
 
-<p> A consulta SQL a seguir exibe os dados que serão exibidos na página index do sistema "JoinUp". Esta consulta recupera informações sobre oportunidades de estágio, incluindo o nome da oportunidade, nome da empresa, tipo de oportunidade, cidade, estado, datas, setor da empresa, informações de contato, link de inscrição e requisitos (agrupados em uma única string). </p>
+A consulta SQL a seguir exibe os dados que serão exibidos na página [index](../joinup/view/index.php) do sistema "JoinUp". Esta consulta recupera informações sobre oportunidades de estágio, incluindo o nome da oportunidade, nome da empresa, tipo de oportunidade, cidade, estado, datas, setor da empresa, informações de contato, link de inscrição e requisitos (agrupados em uma única string).
 
 ```
 select o.nomeoportunidade, e.nomeempresa, t.tipo, o.cidade, o.estado, o.datainicio, o.datafim, e.setorempresa, e.emailempresa, e.telefoneempresa, o.linkins, string_agg(r.requisito, ', ') AS requisitos
