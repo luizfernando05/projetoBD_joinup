@@ -90,3 +90,9 @@ delete from sistema.oportunidade;
 delete from sistema.empresa;
 
 delete from sistema.administrador;
+
+insert into sistema.administrador (usuarioAdm, nomeAdm, senhaAdm)
+values
+  ('usuario1', 'Administrador 1', 'senha1'),
+  ('usuario2', 'Administrador 2', 'senha2'),
+  ('usuario3', 'Administrador 3', 'senha3');
