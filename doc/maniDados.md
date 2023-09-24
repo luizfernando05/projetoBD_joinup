@@ -127,3 +127,13 @@ select o.nomeoportunidade, e.nomeempresa, t.tipo, o.cidade, o.estado, o.datainic
     </li> </br>
     <li> agrupamento de resultados: Os resultados são agrupados com base nas colunas selecionadas, garantindo que cada linha represente uma oportunidade única. Isso evita a duplicação de oportunidades no resultado.</li>
 </ol>
+
+<div id='rodape'>
+
+------
+<h4> Projeto da Disciplina Fundamentos de Banco de Dados </h4>
+<p> Universidade Federal Rural do Semi-Árido (UFERSA), Angicos-RN - Bacharelado em Sistemas de Informação</p>
+<p> © Luiz Fernando, 2023 </p>
+<img src="../joinup/view/images/logoLuizFernandov2.svg">
+
+</div>  
