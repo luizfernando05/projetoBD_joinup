@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JoinUp</title>
 
+    <!-- Inclui o arquivo CSS de estilo -->
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- Define o ícone da página na guia do navegador -->
     <link rel="icon" href="./images/favincon.png" type="image/x-icon">
 
+    <!-- Pré-conecta-se aos servidores do Google Fonts para baixar as fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Importa as fontes 'Poppins' e 'Roboto' do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho da página -->
     <header class="container">
         <div class="header-all-bg">
+            <!-- Logo da página com link para a página inicial -->
             <a href="./index.php"><img src="./images/logoPrimary.svg" alt="Logo da JoinUp."></a>
 
+            <!-- Lista de navegação -->
             <ul class="nav-all">
                 <li><a href="#oportunidades" class="font-1-m-b color-c12">oportunidades</a></li>
 
@@ -26,15 +33,18 @@
         </div>
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
         <div  class="container">
             <div id="main-content">
+                <!-- Card 1 - Informações sobre oportunidades -->
                 <div id="card1">
                     <h1 class="font-1-xxl color-p5">busque a melhor oportunidade para o seu primeiro emprego</h1>
     
                     <p class="font-2-s color-p5">Encontre a vaga de estágio que você sempre sonhou e se insira de fato no mercado de trabalho, aqui você encontrará uma seleção das melhores oportunidades de estágio disponíveis.</p>
                 </div>
     
+                <!-- Card 2 - Imagem ilustrativa -->
                 <div id="card2">
                     <img src="./images/mainImage.svg" alt="Figura de uma mulher como se estivesse presetes a falar algo.">
                 </div>
@@ -42,10 +52,12 @@
         </div>
     </main>
 
+    <!-- Seção de Empresas Parceiras -->
     <section id="parceiros">
         <div id="main-parceiros" class="container">
             <h2 class="font-1-xl color-c12">empresas parceiras:</h2>
 
+            <!-- Lista de logotipos de empresas parceiras -->
             <div id="list-parceiros">
                 <div>
                     <img src="./images/parceiros/clean.svg" alt="logo">
@@ -74,16 +86,20 @@
         </div>
     </section>
     
+    <!-- Seção de Oportunidades de Estágio -->
     <section id="oportunidades">
     <div class="container">
         <h2  id="title-sec-opor" class="font-1-xl color-c12">vagas disponíveis:</h2>
 
+        <!-- Cards de Oportunidades de Estágio gerados dinamicamente a partir do PHP -->
         <div class="cards-oportunidades">
 
         <?php
+        // Inclui o arquivo de configuração do banco de dados (contém informações de conexão)
         include_once('../model/config.php');
 
         try {
+            // Consulta SQL para recuperar informações das oportunidades de estágio
             $query1 = "
             SELECT o.nomeoportunidade, e.nomeempresa, t.tipo, o.cidade, o.estado, o.datainicio, o.datafim, e.setorempresa, e.emailempresa, e.telefoneempresa, o.linkins, string_agg(r.requisito, ', ') AS requisitos
             FROM sistema.oporemp AS oe
@@ -94,9 +110,11 @@
             GROUP BY o.nomeoportunidade, e.nomeempresa, t.tipo, o.cidade, o.estado, o.datainicio, o.datafim, e.setorempresa, e.emailempresa, e.telefoneempresa, o.linkins;
             ";
 
+            // Executa a consulta e percorre os resultados para exibir as oportunidades
             $stmt1 = $conn->query($query1);
 
             while ($row = $stmt1->fetch(PDO::FETCH_ASSOC)) {
+                // Exibe informações das oportunidades de estágio
                 echo '<div class="card-opor">';
                 echo '<h3 class="font-1-m-b color-c12">' . $row['nomeoportunidade'] . '</h3>';
                 echo '<div class="info-gerais">';
@@ -125,6 +143,7 @@
                 echo '</div>';
             }
         } catch (PDOException $e) {
+            // Exibe uma mensagem de erro caso ocorra uma exceção no banco de dados
             echo "Erro na consulta: " . $e->getMessage();
         }
         ?>
@@ -133,13 +152,17 @@
     </div>
 </section>
 
+<!-- Rodapé da página -->
 <footer>
     <div class="footer-index-bg">
         <div class="container">
+            <!-- Logo simplificado da JoinUp -->
             <a href="./index.php"><img src="./images/logoSimple.svg" alt="Logo simplificado joinup"></a>
 
+            <!-- Direitos autorais -->
             <p class="font-1-xs color-c2 copy-footer-index">© joinup, 2023. Todos os direitos reservados.</p>
 
+            <!-- Informações de autoria -->
             <p class="font-1-xs color-c2 autoria-footer-index">Criado e desenvolvido por:</p>
             <img src="./images/logoLuizFernandov2.svg" alt="Logo Luiz Fernando">
         </div>
