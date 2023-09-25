@@ -11,9 +11,11 @@
 
 <h3> Índice: </h3>
 
-1. [Instalação](#instalacao)
-2. [Licença](./LICENSE.md)
-3. [Introdução ao Projeto](#introducao)
+1. [Pré-instalação](#pre-instalacao)
+2. [Instalação](#instalacao)
+3. [Licença](./LICENSE.md)
+4. [Organização do Repositório](#organizacao)
+5. [Introdução ao Projeto](#introducao)
 3. [Criação do Banco de dados](./doc/bandoDados.md)
 4. [Manipulação dos Dados](./doc/maniDados.md)
 5. [Referências]()
@@ -60,6 +62,40 @@ Para visualizar esta aplicação na sua máquina local, siga os seguintes passos
 Com essas etapas, você estará pronto para explorar a aplicação localmente em sua máquina.
 
 </div>  
+
+<div id='organizacao'>
+
+<h3> 🗂️ Organização do Repositório </h3>
+
+O seguinte repositório utiliza o padrão de arquitetura MVC (Model-View-Controller), sendo essa uma abordagem comum para organizar o código em aplicações de software. Ele ajuda a separar a lógica de negócios, a apresentação e a manipulação de dados, facilitando a manutenção e escalabilidade do código. Os códigos seguem a seguinte lógica de organização:
+1. Model: representa a lógica de negócios da aplicação, lidando com a manipulação de dados, regras de negócios e interações com o banco de dados, se aplicável. Nele, são organizadas as classes e módulos relacionados à lógica de negócios.
+2. View: representa a camada de visualização e lida com a apresentação de dados aos usuários. Ela não deve conter lógica de negócios, apenas a exibição dos dados, sendo assim, organiza as classes e módulos relacionados à interface do usuário.
+3. Controller: atuam como intermediários entre a camada de modelo e a camada de visualização. Eles recebem as solicitações do usuário, interagem com o modelo para obter ou modificar dados e, em seguida, passam os dados processados para a camada de visualização. Nessa camada, são organizadas as classes e módulos relacionados ao controle de fluxo e interações entre modelo e visualização.
+
+Além desses, existem outros dois diretórios importantes neste repositório, o sql, onde está presente todas as interações (CREATE, DELETE, etc) feitas diretamente com o banco de dados, e o doc, o qual apresenta alguns documentos simples desta aplicação.
+
+<h4>Sumário simplificado desse repositório: </h4>
+
+- doc/
+    - [bancoDados.md](./doc/bancoDados.md)
+    - [maniDados.md](./doc/maniDados.md)
+- joinup/
+    - controller/
+        - [atoLoginAdm.php](./joinup/controller/atoLoginAdm.php)
+        - [processaCadEmp.php](./joinup/controller/processaCadEmp.php)
+        - [processaCadOpo.php](./joinup/controller/processaCadOpo.php)
+    - model/
+        - [config.php](./joinup/model/config.php)
+    - view/
+        - [css/](./joinup/view/css)
+        - [cadastroEmpresa.php](./joinup/view/cadastroEmpresa.php)
+        - [cadastroOportunidade.php](./joinup/view/cadastroOportunidade.php)
+        - [cadastroSucesso.php](./joinup/view/cadastroSucesso.php)
+        - [index.php](./joinup/view/index.php)
+        - [indexAdm.php](./joinup/view/indexAdm.php)
+        - [loginAdm.php](./joinup/view/loginAdm.php)
+
+</div>
 
 <div id='introducao'>  
 
