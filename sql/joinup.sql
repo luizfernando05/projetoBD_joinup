@@ -1,6 +1,10 @@
+-- Scripts para criação do banco de dados e do schema:
+
 create database joinup;
 
 create schema sistema;
+
+-- Script para a criação das tabelas do banco de dados:
 
 create table sistema.administrador (
 	usuarioAdm varchar(50) primary key,
@@ -52,6 +56,8 @@ create table sistema.requisitoOportunidade (
 	foreign key(idOportunidade) references sistema.oportunidade(idOportunidade)
 );
 
+-- script com as alterções que formas necessárias nas tabelas ao longo do projeto:
+
 alter table sistema.administrador
 add column admin boolean default true;
 
@@ -67,6 +73,8 @@ drop COLUMN telefoneEmpresa;
 alter table sistema.empresa
 RENAME COLUMN telefoneEmpresaNovo TO telefoneEmpresa;
 
+-- script com as cunsultas sql para visualizar os dados das tabelas que estão presentes no banco de dados
+
 select * from sistema.empresa;
 
 select * from sistema.oportunidade;
@@ -79,6 +87,8 @@ select * from sistema.tipoOportunidade;
 
 select * from sistema.oporEmp
 
+-- script com os comandos para deletar os dados presentes nas tabelas do banco de dados 
+
 delete from sistema.oporEmp;
 
 delete from sistema.tipoOportunidade;
@@ -90,6 +100,8 @@ delete from sistema.oportunidade;
 delete from sistema.empresa;
 
 delete from sistema.administrador;
+
+-- script com o insert para inserir dados na tabela de administrador, após essa inserção logar na página de loginAdm.php com alguma dessas credenciais
 
 insert into sistema.administrador (usuarioAdm, nomeAdm, senhaAdm)
 values
