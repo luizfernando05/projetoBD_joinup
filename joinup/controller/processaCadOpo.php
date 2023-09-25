@@ -1,11 +1,15 @@
 <?php
+// Inclui o arquivo de configuração do banco de dados (contém informações de conexão)
 include_once('../model/config.php');
 
+// Verifica se a requisição HTTP é do tipo POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
+        // Cria uma conexão PDO com o banco de dados usando as informações de configuração
         $conn = new PDO("pgsql:host=$db_host;port=$db_port;dbname=$db_name;user=$db_user;password=$db_password");
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+        // Obtém os dados do formulário enviados via POST
         $nomeOportunidade = $_POST['nomeOportunidade'];
         $cep = $_POST['cep'];
         $estado = $_POST['estado'];
@@ -61,14 +65,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
+        // Fecha a conexão com o banco de dados
         $conn = null;
+        // Redireciona para uma página de sucesso após o cadastro bem-sucedido
         header("Location: ../view/cadastroSucesso.php");
         exit();
     } catch (PDOException $e) {
+        // Exibe uma mensagem de erro se ocorrer um erro na conexão ou no processo de cadastro
         die("Erro na conexão com o banco de dados: " . $e->getMessage());
     }
 }
 
+// Função para inserir um tipo de oportunidade na tabela tipoOportunidade
 function inserirTipo($conn, $idOportunidade, $tipo) {
     // Consulta SQL para inserir na tabela tipoOportunidade
     $queryTipoOportunidade = "INSERT INTO sistema.tipoOportunidade (tipo, idOportunidade) VALUES (:tipo, :idOportunidade)";
@@ -78,6 +86,7 @@ function inserirTipo($conn, $idOportunidade, $tipo) {
     $stmtTipoOportunidade->execute();
 }
 
+// Função para inserir um requisito de oportunidade na tabela requisitoOportunidade
 function inserirRequisito($conn, $idOportunidade, $requisito) {
     // Consulta SQL para inserir na tabela requisitoOportunidade
     $queryRequisitoOportunidade = "INSERT INTO sistema.requisitoOportunidade (requisito, idOportunidade) VALUES (:requisito, :idOportunidade)";
