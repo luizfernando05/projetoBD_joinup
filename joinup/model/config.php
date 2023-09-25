@@ -3,8 +3,8 @@
 $db_host = "localhost";         // Host do banco de dados (geralmente "localhost" para servidores locais)
 $db_port = "5432";              // Porta do banco de dados PostgreSQL (padrão: 5432)
 $db_name = "joinup";            // Nome do banco de dados que você deseja conectar
-$db_user = "";          // Nome de usuário do banco de dados
-$db_password = "";      // Senha do banco de dados (substitua isso pela senha real)
+$db_user = "postgres";          // Nome de usuário do banco de dados
+$db_password = "l123f456";      // Senha do banco de dados (substitua isso pela senha real)
 
 try {
     // Cria uma instância da classe PDO e estabelece a conexão com o banco de dados

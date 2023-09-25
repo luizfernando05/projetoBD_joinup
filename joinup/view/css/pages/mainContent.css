@@ -108,3 +108,8 @@
     display: block;
     margin-bottom: 8px;
 }
+
+.opor-preRequi {
+    max-width: 250px; 
+    word-wrap: break-word;
+}
