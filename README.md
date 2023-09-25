@@ -18,6 +18,21 @@
 4. [Manipulação dos Dados](./doc/maniDados.md)
 5. [Referências]()
 
+<div id='pre-instalacao'>
+
+<h3> ⚙️ Pré-instalação </h3>
+
+Antes de realizar a execução desse sistema em sua máquina local, você precisará atender a vários pré-requisitos, incluindo linguagem de programação, servidor web, banco de dados, extensões PHP e configurações específicas. Aqui estão os principais pré-requisitos:
+
+1. <b>Servidor Web (Apache, Nginx, etc.):</b> é necessário um servidor web instalado na sua máquina local, ou alguma extensão em sua IDE que atenda esse requisito. O Apache e o Nginx são escolhas populares. Isso permite que você execute o código PHP e sirva páginas da web.
+2. <b>Banco de Dados PostgreSQL:</b> o código da aplicação está configurado para funcionar com um banco de dados PostgreSQL. Portanto, é importante ter o PostgreSQL instalado e configurado na sua máquina local.
+3. <b>PHP:</b> Certifique-se de ter o PHP instalado na sua máquina. Você pode verificar a versão do PHP digitando php -v no terminal.
+4. <b>Extensão PDO PostgreSQL:</b> para se conectar ao banco de dados PostgreSQL, você precisa ter a extensão PDO PostgreSQL habilitada no PHP. Verifique se essa extensão está habilitada no seu arquivo de configuração php.ini.
+5. <b>Extensão PDO:</b> a extensão PDO é necessária para trabalhar com bancos de dados usando o PDO (PHP Data Objects). Verifique se a extensão PDO também está habilitada no seu PHP.
+6. <b>Ambiente de Desenvolvimento:</b> Um ambiente de desenvolvimento integrado (IDE) ou editor de texto para escrever e editar seu código, como Visual Studio Code, PHPStorm ou qualquer editor de sua escolha.
+
+</div>
+
 <div id='instalacao'>  
 
 <h3> 🔧 Instalação </h3>
