@@ -77,7 +77,7 @@ Além desses, existem outros dois diretórios importantes neste repositório, o 
 <h4>Sumário simplificado desse repositório: </h4>
 
 - doc/
-    - [bancoDados.md](./doc/bancoDados.md)
+    - [bancoDados.md](./doc/bandoDados.md)
     - [maniDados.md](./doc/maniDados.md)
 - joinup/
     - controller/
