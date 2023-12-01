@@ -10,17 +10,17 @@
 
 <h4> 2.1. Definição das entidades </h4>
 
-<p> Na fase de modelagem ER, foram indetificadas as principais entidades que irão compor o banco de dados do sistema: </p>
+<p> Na fase de modelagem ER, foram identificadas as principais entidades que comporão o banco de dados do sistema: </p>
 
 <ul>
-    <li> <b>Administrador:</b> perfil de usuário que possui privilégios e responsabilidades especiais relacionadas à administração e gerenciamento do sistema, neste ele terá o papel de inserir as empresas e as oportunidades no sistema; </li>
+    <li> <b>Administrador:</b> perfil de usuário com privilégios e responsabilidades especiais relacionados à administração e gerenciamento do sistema. Neste, ele terá o papel de inserir as empresas e as oportunidades no sistema; </li>
     <li> <b>Empresa:</b> contém informações sobre as empresas que oferecem vagas de estágio, como nome, setor de atuação e localização; </li>
     <li> <b>Oportunidade:</b> representa informações específicas sobre cada vaga, incluindo título, descrição, requisitos, localização e datas de aplicação. </li>
 </ul>
 
 <h4> 2.2. Definição de relacionamentos </h4>
 
-<p> A seguir, foram estabeelcidos os relacionamentos entre as entidades: </p>
+<p> A seguir, foram estabelecidos os relacionamentos entre as entidades: </p>
 
 <ul>
     <li> Cada <b>administrador cadastra</b> várias <b>empresas</b> ou várias <b>oportunidades</b>; </li>
